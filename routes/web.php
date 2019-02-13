@@ -24,4 +24,4 @@ Route::get('article/create', 'ArticleController@create')->name('article.create')
 Route::post('article', 'ArticleController@store')->name('article.store');
 Route::get('article/{id}/edit','ArticleController@edit')->name('article.edit')->middleware('auth');
 Route::put('article/{id}/update', 'ArticleController@update')->name('article.update');
-Route::get('article','ArticleController@index')->name('article.index');
+Route::get('article','ArticleController@index')->name('article');

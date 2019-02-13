@@ -12,12 +12,12 @@
                         <th>aksi</th>
                     </tr>
 
-                    @foreach (articles as article)
+                    @foreach ($articles as $article)
                     <tr>
-                        <td>{{$articles as $article}}</td>
+                        <td>{{$article->id}}</td>
                         <td>{{$article->title}}</td>
                         <td>{{$article->content}}</td>
-                        <td><a href="{{route('article.edit - $article')}}" class="btn btn-primary">edit</a></td>
+                        <td><a href="{{route('article.edit', $article)}}" class="btn btn-primary">edit</a></td>
                     </tr>
                     @endforeach
                 </table>
