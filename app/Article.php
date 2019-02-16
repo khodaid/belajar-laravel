@@ -8,4 +8,9 @@ class Article extends Model
 {
     // protected $fillable = =['title', 'content', 'user_id', 'slug'];
     protected $guarded = [];
+
+    public function user()
+    {
+        return $this->belongsTo(user::class);
+    }
 }
